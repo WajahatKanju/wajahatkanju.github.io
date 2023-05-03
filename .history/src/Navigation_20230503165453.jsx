@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaCodepen, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaCodepen, FaEnvelope, FaStackOverflow } from 'react-icons/fa';
 import './styles/Navigation.scss';
 
 function Navigation() {

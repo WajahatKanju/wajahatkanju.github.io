@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaCodepen, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaCodepen, FaEnvelope, FaStackOverflow } from 'react-icons/fa';
 import './styles/Navigation.scss';
 
 function Navigation() {
@@ -8,14 +8,17 @@ function Navigation() {
         <a href="https://github.com/WajahatKanju" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
-        <a href="https://www.linkedin.com/in/wajahat-ahmad-5b493b181/" target="_blank" rel="noopener noreferrer">
+        <a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
-        <a href="https://codepen.io/wajahatahmad" target="_blank" rel="noopener noreferrer">
+        <a href="https://codepen.io/username" target="_blank" rel="noopener noreferrer">
           <FaCodepen />
         </a>
-        <a href="mailto:wajahat5ahmad@gmail.com">
+        <a href="mailto:email@example.com">
           <FaEnvelope />
+        </a>
+        <a href="https://stackoverflow.com/users/123456/username" target="_blank" rel="noopener noreferrer">
+          <FaStackOverflow />
         </a>
       </div>
       <ul className="navigation__right">

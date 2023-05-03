@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaCodepen, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaCodepen, FaEnvelope, FaStackOverflow } from 'react-icons/fa';
 import './styles/Navigation.scss';
 
 function Navigation() {
@@ -16,6 +16,9 @@ function Navigation() {
         </a>
         <a href="mailto:wajahat5ahmad@gmail.com">
           <FaEnvelope />
+        </a>
+        <a href="https://stackoverflow.com/users/123456/username" target="_blank" rel="noopener noreferrer">
+          <FaStackOverflow />
         </a>
       </div>
       <ul className="navigation__right">
