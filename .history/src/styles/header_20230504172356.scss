@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  color: #2d3748;
+
+  &__left {
+    
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 1rem;
+
+      span {
+        position: relative;
+        
+        &:hover{
+
+          animation: bounce; /* referring directly to the animation's @keyframe declaration */
+          animation-duration: 2s;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    #typewriter {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 0.0625rem 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+    }
+  }
+}
