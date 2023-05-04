@@ -1,0 +1,62 @@
+:root {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem; /* equivalent to 16px */
+}
+
+h1 {
+  font-size: 3.2rem; /* equivalent to 32px */
+}
+
+h2 {
+  font-size: 2.4rem; /* equivalent to 24px */
+}
+
+p {
+  font-size: 1.4rem; /* equivalent to 14px */
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.8rem; /* equivalent to 18px */
+  }
+
+  h1 {
+    font-size: 4.8rem; /* equivalent to 48px */
+  }
+
+  h2 {
+    font-size: 3.2rem; /* equivalent to 32px */
+  }
+
+  p {
+    font-size: 1.6rem; /* equivalent to 16px */
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 2rem; /* equivalent to 20px */
+  }
+
+  h1 {
+    font-size: 6.4rem; /* equivalent to 64px */
+  }
+
+  h2 {
+    font-size: 4.8rem; /* equivalent to 48px */
+  }
+
+  p {
+    font-size: 1.8rem; /* equivalent to 18px */
+  }
+}
