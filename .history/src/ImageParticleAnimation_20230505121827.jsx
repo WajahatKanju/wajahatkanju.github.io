@@ -140,7 +140,7 @@ export default function ImageParticleAnimation() {
       <canvas
         ref={canvasRef}
         id="canvas"
-        style={{ position: "absolute", top: "0", left: "0", zIndex: '-1', maxWidth: '100vw', maxHeight: '100%' }}
+        style={{ position: "absolute", top: "0", left: "0", zIndex: '-1', maxWidth: '100vw' }}
       ></canvas>
     </>
   );
