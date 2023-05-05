@@ -18,9 +18,8 @@ body {
 }
 
 section:nth-of-type(2n - 1){
-  background-color: #F8F8F8;
+  background-color: lightblue;
 }
-
 /* Media queries */
 @media screen and (max-width: 599px) {
   /* Small screens */

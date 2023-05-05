@@ -1,5 +1,5 @@
 .skills {
-  padding: 5rem 0;
+  padding: 4rem 0;
 
   &__header {
     font-size: 3rem;
@@ -23,7 +23,7 @@
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: translateY(-25px) scale(1.06);
+      transform: translateY(-5px);
     }
 
     &__name {

@@ -17,8 +17,8 @@ body {
   overflow-x: hidden;
 }
 
-section:nth-of-type(2n - 1){
-  background-color: #F8F8F8;
+section:nth-child(2){
+  background-color: red !important;
 }
 
 /* Media queries */
