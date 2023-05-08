@@ -16,7 +16,6 @@ function Navigation() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Github"
-          tabIndex="0"
         >
           <FaGithub alt="Github Icon" />
         </a>
@@ -24,59 +23,45 @@ function Navigation() {
           href="https://www.linkedin.com/in/wajahat-ahmad-5b493b181/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          tabIndex="0"
         >
-          <FaLinkedin alt="LinkedIn Icon" />
+          <FaLinkedin />
         </a>
         <a
           href="https://codepen.io/wajahatahmad"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="CodePen"
-          tabIndex="0"
         >
-          <FaCodepen alt="CodePen Icon" />
+          <FaCodepen />
         </a>
-        <a
-          href="mailto:wajahat5ahmad@gmail.com"
-          aria-label="Email"
-          tabIndex="0"
-        >
-          <FaEnvelope alt="Email Icon" />
+        <a href="mailto:wajahat5ahmad@gmail.com">
+          <FaEnvelope />
         </a>
       </div>
       <ul className={`navigation__right ${menuOpen ? "active" : ""}`}>
         <li>
-          <a href="#" aria-label="Home">
-            Home{" "}
-          </a>
+          {" "}
+          <a href="#">Home </a>{" "}
         </li>
         <li>
-          <a href="#about" aria-label="About" tabIndex="0">
-            About
-          </a>
+          {" "}
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="#skills" aria-label="Skills" tabIndex="0">
-            Skills{" "}
-          </a>
+          {" "}
+          <a href="#skills">Skills </a>
         </li>
         <li>
-          <a href="#projects" aria-label="Projects" tabIndex="0">
-            Projects{" "}
-          </a>
+          {" "}
+          <a href="#projects">Projects </a>
         </li>
         <li>
-          <a href="#contact" aria-label="Contact" tabIndex="0">
-            Contact{" "}
-          </a>
+          {" "}
+          <a href="#contact">Contact </a>
         </li>
       </ul>
       <div
         className={`navigation-button ${menuOpen ? "active" : ""}`}
         onClick={handleMenuClick}
-        role="button"
       >
         <div className="navigation__menu-icon">
           <div className="navigation__menu-line"></div>

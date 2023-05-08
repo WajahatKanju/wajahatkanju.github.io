@@ -8,45 +8,24 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      name: name,
-      email: email,
-      message: message,
-    };
-    try {
-      const response = await fetch(
-        "https://getform.io/f/07960d38-ead6-46e2-b463-1ee6c6b0d6ab",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (response.ok) {
-        setName("");
-        setEmail("");
-        setMessage("");
-        console.log(response);
-      } else {
-        throw new Error("Network response was not ok");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    const formData = new FormData(e.target);
+
+    fetch("https://getform.io/f/07960d38-ead6-46e2-b463-1ee6c6b0d6ab", {
+        method: "POST",
+        body: formData,
+        headers: {
+            "Accept": "application/json",
+        },
+    })
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
   };
 
   return (
     <section className="contact__form" id="contact">
       <div className="contact__form__container">
         <h2 className="form__header">Contact Me</h2>
-        <form
-          method="POST"
-          acceptCharset="UTF-8"
-          id="form"
-          onSubmit={handleSubmit}
-        >
+        <form  method="POST" acceptCharset="UTF-8" id="form" onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -73,7 +52,7 @@ function ContactForm() {
             onChange={(e) => setMessage(e.target.value)}
             required
           />
-          <input type="hidden" name="_gotcha" style={{ display: "none" }} />
+           <input type="hidden" name="_gotcha" style="display:none !important" />
           <button type="submit">Submit</button>
         </form>
       </div>

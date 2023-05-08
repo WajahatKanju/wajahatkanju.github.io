@@ -16,7 +16,6 @@ function Navigation() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Github"
-          tabIndex="0"
         >
           <FaGithub alt="Github Icon" />
         </a>
@@ -25,7 +24,6 @@ function Navigation() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          tabIndex="0"
         >
           <FaLinkedin alt="LinkedIn Icon" />
         </a>
@@ -34,21 +32,16 @@ function Navigation() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="CodePen"
-          tabIndex="0"
         >
           <FaCodepen alt="CodePen Icon" />
         </a>
-        <a
-          href="mailto:wajahat5ahmad@gmail.com"
-          aria-label="Email"
-          tabIndex="0"
-        >
+        <a href="mailto:wajahat5ahmad@gmail.com" aria-label="Email">
           <FaEnvelope alt="Email Icon" />
         </a>
       </div>
       <ul className={`navigation__right ${menuOpen ? "active" : ""}`}>
         <li>
-          <a href="#" aria-label="Home">
+          <a href="#" aria-label="Home" tabIndex="0">
             Home{" "}
           </a>
         </li>

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import "./styles/ContactForm.scss";
 
@@ -13,28 +14,21 @@ function ContactForm() {
       email: email,
       message: message,
     };
-    try {
-      const response = await fetch(
-        "https://getform.io/f/07960d38-ead6-46e2-b463-1ee6c6b0d6ab",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (response.ok) {
+
+    fetch("https://getform.io/f/07960d38-ead6-46e2-b463-1ee6c6b0d6ab", {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
         setName("");
         setEmail("");
         setMessage("");
         console.log(response);
-      } else {
-        throw new Error("Network response was not ok");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -73,7 +67,11 @@ function ContactForm() {
             onChange={(e) => setMessage(e.target.value)}
             required
           />
-          <input type="hidden" name="_gotcha" style={{ display: "none" }} />
+          <input
+            type="hidden"
+            name="_gotcha"
+            style={{ display: "none !important" }}
+          />
           <button type="submit">Submit</button>
         </form>
       </div>

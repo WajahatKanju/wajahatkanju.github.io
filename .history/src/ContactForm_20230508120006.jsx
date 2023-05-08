@@ -14,16 +14,13 @@ function ContactForm() {
       message: message,
     };
     try {
-      const response = await fetch(
-        "https://getform.io/f/07960d38-ead6-46e2-b463-1ee6c6b0d6ab",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch("https://getform.io/f/my_key", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       if (response.ok) {
         setName("");
         setEmail("");
