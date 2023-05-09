@@ -17,6 +17,19 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+h2:hover {
+  color: #FF8C00;
+  transform: scale(1.05);
+}
+
 section:nth-of-type(2n - 1){
   background-color: #F8F8F8;
 }
