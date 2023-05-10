@@ -27,23 +27,23 @@
   margin: 2rem auto;
   padding: 1rem;
   border-radius: 5px;
-  background-color: #28a745;
   color: #fff;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease;
+  background-color: #28a745;
 
-  & .show {
+  &.show {
     visibility: visible;
     opacity: 1;
   }
 
-  & .progress {
+  &.progress {
     background-color: #ffc107;
     color: #333;
   }
 
-  & .error {
+  &.error {
     background-color: #dc3545;
     color: #fff;
   }
@@ -93,7 +93,7 @@
     outline: none;
 
     & ~ label {
-      transform: translate(0, -1.5rem);
+      transform: translate(0, -2.0rem);
       font-size: 1.25rem;
       background-color: white;
     }
