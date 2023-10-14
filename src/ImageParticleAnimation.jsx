@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import cartoonMe from "./assets/cartoon.png";
 
 export default function ImageParticleAnimation() {
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const png = new Image();
   png.src = cartoonMe;
@@ -36,17 +35,17 @@ export default function ImageParticleAnimation() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       class Particle {
-        constructor(x, y, color, size=1) {
-          this.baseX = x + (canvas.width * 0.75 ) - png.width * 2;
-          this.baseY = y + (canvas.height * 0.45 ) - png.height * 2;
+        constructor(x, y, color, size = 1) {
+          this.baseX = x + canvas.width * 0.75 - png.width * 2;
+          this.baseY = y + canvas.height * 0.45 - png.height * 2;
 
-          this.x = this.baseX + Math.random() * 200 - 25 ;
-          this.y = this.baseY + Math.random() * 200 - 25 ;
+          this.x = this.baseX + Math.random() * 150 - 75;
+          this.y = this.baseY + Math.random() * 150 - 75;
 
           this.color = color;
           this.size = size;
 
-          this.density = Math.random() * 10 + 2;
+          this.density = Math.random() * 3 + 2;
         }
 
         draw() {
@@ -65,11 +64,11 @@ export default function ImageParticleAnimation() {
           let forceDirectionY = dy / distance;
 
           const maxDistance = 100;
-          let force = (maxDistance - distance) / (maxDistance * 0.5);
+          let force = (maxDistance - distance) / (maxDistance * 1.5);
           if (force < 0) force = 0;
 
-          let directionX = forceDirectionX * force * this.density * 0.6;
-          let directionY = forceDirectionY * force * this.density * 0.6;
+          let directionX = forceDirectionX * force * this.density * 0.36;
+          let directionY = forceDirectionY * force * this.density * 0.36;
 
           if (distance < mouse.radius + this.size) {
             this.x -= directionX;
@@ -101,7 +100,9 @@ export default function ImageParticleAnimation() {
                 data.data[y * 4 * data.width + x * 4 + 1]
               }, ${data.data[y * 4 * data.width + x * 4 + 2]} )`;
 
-              particleArray.push(new Particle(positionX * 4 , positionY* 4, color , 0.25));
+              particleArray.push(
+                new Particle(positionX * 4, positionY * 4, color, 0.25)
+              );
             }
           }
         }
@@ -110,7 +111,6 @@ export default function ImageParticleAnimation() {
       function animate() {
         requestAnimationFrame(animate);
         ctx.fillStyle = "rgba(255,255,255, 0.5)";
-       
 
         ctx.fillRect(0, 0, innerWidth, innerHeight);
 
@@ -140,7 +140,14 @@ export default function ImageParticleAnimation() {
       <canvas
         ref={canvasRef}
         id="canvas"
-        style={{ position: "absolute", top: "0", left: "0", zIndex: '-1', maxWidth: '100vw', maxHeight: '100%' }}
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          zIndex: "-1",
+          maxWidth: "100vw",
+          maxHeight: "100%",
+        }}
       ></canvas>
     </>
   );

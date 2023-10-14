@@ -1,5 +1,13 @@
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaCodepen, FaEnvelope } from "react-icons/fa";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
 import "./styles/Navigation.scss";
 
 function Navigation() {
@@ -48,29 +56,61 @@ function Navigation() {
       </div>
       <ul className={`navigation__right ${menuOpen ? "active" : ""}`}>
         <li>
-          <a href="#" aria-label="Home">
-            Home{" "}
-          </a>
+          <Link to="header" spy={true} smooth={true} offset={50} duration={500}>
+            Home
+          </Link>
         </li>
         <li>
-          <a href="#about" aria-label="About" tabIndex="0">
+          <Link
+            to="about"
+            aria-label="About"
+            tabIndex="0"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#skills" aria-label="Skills" tabIndex="0">
+          <Link
+            to="skills"
+            aria-label="Skills"
+            tabIndex="0"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
             Skills{" "}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#projects" aria-label="Projects" tabIndex="0">
+          <Link
+            to="projects"
+            aria-label="Projects"
+            tabIndex="0"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
             Projects{" "}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contact" aria-label="Contact" tabIndex="0">
+          <Link
+            to="contact"
+            aria-label="Contact"
+            tabIndex="0"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
             Contact{" "}
-          </a>
+          </Link>
         </li>
       </ul>
       <div

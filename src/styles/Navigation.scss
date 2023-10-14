@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
   position: fixed;
@@ -18,7 +18,8 @@
     display: flex;
     align-items: center;
 
-    a {
+    a,
+    Link {
       color: #333;
       margin-right: 2rem;
       font-size: 2rem;
@@ -33,7 +34,6 @@
 
   &__right {
     display: block;
-    
 
     li {
       display: inline-block;
@@ -49,6 +49,8 @@
 
         &:hover {
           color: #666;
+          cursor: pointer;
+
           /* add transition and transform properties to create a subtle animation */
           transition: all 0.3s ease;
           transform: translateY(-5px);
@@ -62,9 +64,7 @@
           width: 100%;
           height: 2px;
           background-color: #666;
-          transform: scaleX(
-            0
-          ); /* set the initial scale of the hover effect to 0 to make it invisible */
+          transform: scaleX(0); /* set the initial scale of the hover effect to 0 to make it invisible */
 
           /* add transition property to animate the scaling of the hover effect */
           transition: all 0.3s ease;
@@ -80,9 +80,7 @@
           width: 100%;
           height: 2px;
           background-color: #666;
-          transform: scaleX(
-            0
-          ); /* set the initial scale of the hover effect to 0 to make it invisible */
+          transform: scaleX(0); /* set the initial scale of the hover effect to 0 to make it invisible */
 
           /* add transition property to animate the scaling of the hover effect */
           transition: all 0.3s ease;
@@ -144,7 +142,6 @@
 
     &__right {
       animation: slide-out 0.3s ease-in-out forwards;
-
     }
 
     &-button {
@@ -158,7 +155,8 @@
       font-size: 3rem;
       color: #333;
       transition: color 0.3s ease-in-out;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25),
+      box-shadow:
+        0px 2px 2px rgba(0, 0, 0, 0.25),
         0px 2px 6px rgba(0, 0, 0, 0.2);
       border-radius: 50%;
 
@@ -187,7 +185,9 @@
           width: 50%;
           height: 2px;
           background-color: #333;
-          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+          transition:
+            transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out;
 
           &:first-of-type {
             transform: translateY(-0.5rem);

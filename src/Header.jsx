@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import Typewriter from "typewriter-effect/dist/core";
 import "./styles/Header.scss";
-
+import "animate.css";
+import { gsap } from "gsap";
 import ImageParticleAnimation from "./ImageParticleAnimation";
 
 function Header() {
@@ -12,19 +13,41 @@ function Header() {
       delay: 80,
       autoStart: true,
     });
-    
+
     typewriter.start();
   }, []);
 
+  const text = "Hi! I Am Wajahat Ahmad";
+  const words = text.split(" ");
+  const slogan = "Turning ideas into interactive realities";
+  const sloganWords = slogan.split(" ");
 
   return (
-    <header className="header" role="banner">
+    <header className="header" role="banner" id="header">
       <div className="header__left">
-        <h1>Hi! I Am Wajahat Ahmad</h1>
+        <h1>
+          {words.map((word) => (
+            <>
+              {word.split("").map((character, i) => (
+                <span key={i}>{character}</span>
+              ))}
+              &nbsp;
+            </>
+          ))}
+        </h1>
         <p id="typewriter"></p>
-        <h3>Turning ideas into interactive realities</h3>
+        <h3>
+          {sloganWords.map((word, index) => (
+            <span key={index}>
+              {word.split("").map((character, i) => (
+                <span key={i}>{character}</span>
+              ))}
+              &nbsp;
+            </span>
+          ))}
+        </h3>
       </div>
-      <div className="header__right">
+      <div className="header__right ">
         <ImageParticleAnimation />
       </div>
     </header>

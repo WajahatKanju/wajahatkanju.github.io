@@ -1,7 +1,8 @@
 .header {
   display: flex;
   padding: 2rem 5rem;
-  
+  $interval: 0.12s;
+
   justify-content: space-around;
   align-items: center;
   min-height: 100vh;
@@ -10,10 +11,8 @@
   z-index: 10;
   flex: 1 1 auto;
 
-
-  img{
+  img {
     display: block;
-  
   }
 
   &__left {
@@ -22,17 +21,34 @@
       font-weight: 600;
       text-align: center;
       margin-bottom: 1rem;
+      animation-name: zoomInLeft;
+      animation-duration: 2.8s;
+
+      @for $i from 1 through 22 {
+        span:nth-of-type(#{$i}) {
+          animation-name: rubberBand;
+          animation-duration: 2.8s;
+          animation-fill-mode: both;
+          animation-iteration-count: 1;
+          animation-delay: 2.8s + ($i * $interval); // Increment the delay by the interval
+        }
+      }
 
       span {
         display: inline-block;
-     
-        &.animate__bounce:hover {
-          animation-name: jelly;
-          animation-duration: 1s;
+
+        &:hover {
+          animation-name: rubberBand;
+          animation-duration: 0.8s;
           animation-fill-mode: both;
           animation-iteration-count: infinite;
         }
       }
+    }
+
+    p {
+      animation: bounceInLeft;
+      animation-duration: 3s;
     }
 
     h3 {
@@ -40,6 +56,29 @@
       font-weight: 400;
       text-align: center;
       margin-bottom: 3rem;
+
+      margin: 0 0.5rem;
+
+      span {
+        display: inline-block;
+
+        &:hover {
+          animation-name: rubberBand;
+          animation-duration: 0.8s;
+          animation-fill-mode: both;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      @for $i from 1 through 5 {
+        span:nth-of-type(#{$i}) {
+          animation-name: bounceInLeft;
+          animation-duration: 2.8s;
+          animation-fill-mode: both;
+          animation-iteration-count: 1;
+          animation-delay: ($i * $interval); // Increment the delay by the interval
+        }
+      }
     }
 
     #typewriter {
@@ -50,11 +89,11 @@
     }
   }
 
-  &__right{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 1 1 auto;
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
   }
 
   @media screen and (max-width: 768px) {
@@ -70,7 +109,6 @@
       h1 {
         text-align: center;
         font-size: 3.5rem;
-
       }
 
       h3 {
@@ -89,7 +127,6 @@
     }
   }
 }
-
 
 @keyframes jelly {
   0%,
