@@ -1,5 +1,7 @@
 /* Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,26 +14,29 @@ html {
 
 /* Base styles */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem; /* 16px */
   overflow-x: hidden;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 3.5rem;
   margin-bottom: 2rem;
   text-align: center;
   transition: all 0.3s ease;
 }
 
-h2:hover {
-  color: #FF8C00;
-  transform: scale(1.05);
+h2 {
+  &:hover {
+    animation: jello;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
 }
 
-section:nth-of-type(2n - 1){
-  background-color: #F8F8F8;
+section:nth-of-type(2n - 1) {
+  background-color: #f8f8f8;
 }
 
 /* Media queries */

@@ -1,16 +1,32 @@
 .about {
   padding: 5rem 0;
-  display: flex;
-  justify-content: center;
 
-  &__me--container {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 2rem;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+  }
+
+  &__image,
+  &__content {
+    max-width: 45%;
+  }
+
+  &__content {
+    transform: translateX(100rem);
+  }
+
+  &__image {
+    max-width: 25%;
+    transform: translate(-100rem, -50rem);
+    img {
+      max-width: 100%;
+    }
   }
 
   p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 2rem;

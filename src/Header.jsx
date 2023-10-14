@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Typewriter from "typewriter-effect/dist/core";
 import "./styles/Header.scss";
 import "animate.css";
-import { gsap } from "gsap";
 import ImageParticleAnimation from "./ImageParticleAnimation";
 
 function Header() {
