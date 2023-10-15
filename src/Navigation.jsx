@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaCodepen, FaEnvelope } from "react-icons/fa";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-} from "react-scroll";
+import { Link } from "react-scroll";
 import "./styles/Navigation.scss";
 
 function Navigation() {
@@ -97,6 +90,19 @@ function Navigation() {
             duration={500}
           >
             Projects{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="accomplishments"
+            aria-label="Accomplishments"
+            tabIndex="0"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Accomplishments{" "}
           </Link>
         </li>
         <li>
