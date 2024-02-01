@@ -1,1 +1,1 @@
-[![GitHub Stars](https://img.shields.io/github/stars/your-username/your-repo.svg)](https://github.com/your-username/your-repo/stargazers)
+![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=wajahatkanju&show_icons=true&theme=radical)
